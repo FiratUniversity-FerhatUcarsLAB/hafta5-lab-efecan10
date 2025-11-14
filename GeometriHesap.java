@@ -1,145 +1,114 @@
 /*
- * Ad Soyad: [ADINIZI BURAYA YAZIN]
- * Ogrenci No: [OGRENCI NUMARANIZI BURAYA YAZIN]
- * Tarih: [TARIHI BURAYA YAZIN]
- * Aciklama: Gorev 1 - Geometrik Sekil Hesaplayici
- * 
- * Bu program temel geometrik sekillerin alan ve
- * cevre hesaplamalarini yapar.
- */
-
-import java.util.Scanner;
+ * Ad Soyad: [Efecan Önal]
+ * Ogrenci No: [250541093]
+ * Tarih: [14.11.2025]
+ * Aciklama: Gorev 2 - Fizik Formulu Asistani
+ *import java.util.Scanner;
 
 public class GeometriHesap {
-    
-    // METOT 1: Kare alani
+
+    // 1. Kare alanı
     public static double calculateSquareArea(double side) {
-        // Alan = kenar * kenar
-        
-        return 0.0; // Degistirin
+        return side * side;
     }
-    
-    // METOT 2: Kare cevresi
+
+    // 2. Kare çevresi
     public static double calculateSquarePerimeter(double side) {
-        // Cevre = 4 * kenar
-        
-        return 0.0; // Degistirin
+        return 4 * side;
     }
-    
-    // METOT 3: Dikdortgen alani
+
+    // 3. Dikdörtgen alanı
     public static double calculateRectangleArea(double width, double height) {
-        // Alan = genislik * yukseklik
-        
-        return 0.0; // Degistirin
+        return width * height;
     }
-    
-    // METOT 4: Dikdortgen cevresi
+
+    // 4. Dikdörtgen çevresi
     public static double calculateRectanglePerimeter(double width, double height) {
-        // Cevre = 2 * (genislik + yukseklik)
-        
-        return 0.0; // Degistirin
+        return 2 * (width + height);
     }
-    
-    // METOT 5: Daire alani
+
+    // 5. Daire alanı
     public static double calculateCircleArea(double radius) {
-        // Alan = PI * r * r
-        // Math.PI kullanabilirsiniz
-        
-        return 0.0; // Degistirin
+        return Math.PI * radius * radius;
     }
-    
-    // METOT 6: Daire cevresi
+
+    // 6. Daire çevresi
     public static double calculateCircleCircumference(double radius) {
-        // Cevre = 2 * PI * r
-        
-        return 0.0; // Degistirin
+        return 2 * Math.PI * radius;
     }
-    
-    // METOT 7: Ucgen alani (taban ve yukseklik ile)
+
+    // 7. Üçgen alanı (taban-yükseklik)
     public static double calculateTriangleArea(double base, double height) {
-        // Alan = (taban * yukseklik) / 2
-        
-        return 0.0; // Degistirin
+        return (base * height) / 2;
     }
-    
-    // METOT 8: Ucgen cevresi
+
+    // 8. Üçgen çevresi
     public static double calculateTrianglePerimeter(double a, double b, double c) {
-        // Cevre = a + b + c
-        
-        return 0.0; // Degistirin
+        return a + b + c;
     }
-    
+
+    // ================================
+    //            MAIN
+    // ================================
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
-        
-        System.out.println("=== GEOMETRIK SEKIL HESAPLAYICI ===");
-        System.out.println();
-        
-        // KARE bilgileri
-        System.out.println("KARE:");
-        System.out.print("Kenar uzunlugu (cm): ");
-        double squareSide = input.nextDouble();
-        
-        // DIKDORTGEN bilgileri
-        System.out.println("\nDIKDORTGEN:");
-        System.out.print("Kisa kenar (cm): ");
-        double rectWidth = input.nextDouble();
+
+        System.out.println("=== GEOMETRIK SEKIL HESAPLAYICI ===\n");
+
+        // KARE
+        System.out.print("KARE:\nKenar uzunlugu (cm): ");
+        double kareKenar = input.nextDouble();
+
+        // DIKDORTGEN
+        System.out.print("\nDIKDORTGEN:\nKisa kenar (cm): ");
+        double kisa = input.nextDouble();
         System.out.print("Uzun kenar (cm): ");
-        double rectHeight = input.nextDouble();
-        
-        // DAIRE bilgileri
-        System.out.println("\nDAIRE:");
-        System.out.print("Yaricap (cm): ");
-        double radius = input.nextDouble();
-        
-        // UCGEN bilgileri
-        System.out.println("\nUCGEN:");
-        System.out.print("Taban (cm): ");
-        double base = input.nextDouble();
+        double uzun = input.nextDouble();
+
+        // DAIRE
+        System.out.print("\nDAIRE:\nYaricap (cm): ");
+        double r = input.nextDouble();
+
+        // UCGEN
+        System.out.print("\nUCGEN:\nTaban (cm): ");
+        double taban = input.nextDouble();
         System.out.print("Yukseklik (cm): ");
-        double height = input.nextDouble();
+        double yukseklik = input.nextDouble();
         System.out.print("1. kenar (cm): ");
-        double side1 = input.nextDouble();
+        double a = input.nextDouble();
         System.out.print("2. kenar (cm): ");
-        double side2 = input.nextDouble();
+        double b = input.nextDouble();
         System.out.print("3. kenar (cm): ");
-        double side3 = input.nextDouble();
-        
-        // HESAPLAMALARI YAP - Metotlari cagir
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // SONUCLARI YAZDIR
+        double c = input.nextDouble();
+
+        // =======================================
+        //            SONUÇLAR
+        // =======================================
         System.out.println("\n========================================");
-        System.out.println("         HESAPLAMA SONUCLARI");
+        System.out.println("        HESAPLAMA SONUCLARI");
+        System.out.println("========================================\n");
+
+        // KARE
+        System.out.printf("KARE (kenar: %.1f cm):\n", kareKenar);
+        System.out.printf("  Alan      : %.2f cm²\n", calculateSquareArea(kareKenar));
+        System.out.printf("  Cevre     : %.2f cm\n\n", calculateSquarePerimeter(kareKenar));
+
+        // DIKDORTGEN
+        System.out.printf("DIKDORTGEN (%.1f x %.1f cm):\n", kisa, uzun);
+        System.out.printf("  Alan      : %.2f cm²\n", calculateRectangleArea(kisa, uzun));
+        System.out.printf("  Cevre     : %.2f cm\n\n", calculateRectanglePerimeter(kisa, uzun));
+
+        // DAIRE
+        System.out.printf("DAIRE (yaricap: %.1f cm):\n", r);
+        System.out.printf("  Alan      : %.2f cm²\n", calculateCircleArea(r));
+        System.out.printf("  Cevre     : %.2f cm\n\n", calculateCircleCircumference(r));
+
+        // UCGEN
+        System.out.printf("UCGEN (taban: %.1f, yukseklik: %.1f cm):\n", taban, yukseklik);
+        System.out.printf("  Alan      : %.2f cm²\n", calculateTriangleArea(taban, yukseklik));
+        System.out.printf("  Cevre     : %.2f cm\n\n", calculateTrianglePerimeter(a, b, c));
+
         System.out.println("========================================");
-        
-        System.out.printf("\nKARE (kenar: %.1f cm):\n", squareSide);
-        // Alan ve cevre yazdir
-        
-        
-        System.out.printf("\nDIKDORTGEN (%.1f x %.1f cm):\n", rectWidth, rectHeight);
-        // Alan ve cevre yazdir
-        
-        
-        System.out.printf("\nDAIRE (yaricap: %.1f cm):\n", radius);
-        // Alan ve cevre yazdir
-        
-        
-        System.out.printf("\nUCGEN (taban: %.1f, yukseklik: %.1f cm):\n", base, height);
-        // Alan ve cevre yazdir
-        
-        
-        System.out.println("========================================");
-        
-        input.close();
     }
 }
