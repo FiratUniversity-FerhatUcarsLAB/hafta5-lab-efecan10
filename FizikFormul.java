@@ -1,126 +1,114 @@
 /*
- * Ad Soyad: [ADINIZI BURAYA YAZIN]
- * Ogrenci No: [OGRENCI NUMARANIZI BURAYA YAZIN]
- * Tarih: [TARIHI BURAYA YAZIN]
+ * Ad Soyad: [Efecan Önal]
+ * Ogrenci No: [250541093]
+ * Tarih: [14.11.2025]
  * Aciklama: Gorev 2 - Fizik Formulu Asistani
- *
- * Bu program temel fizik formullerini kullanarak
- * hesaplamalar yapar.
- */
+ *import java.util.Scanner;
 
-import java.util.Scanner;
+public class GeometriHesap {
 
-public class FizikFormul {
-
-    // Sabit: Yercekimi ivmesi
-    final static double GRAVITY = 9.8; // m/s²
-
-    // METOT 1: Hız hesapla (v = s / t)
-    public static double calculateVelocity(double distance, double time) {
-        // v = mesafe / zaman
-        return 0.0; // Degistirin
+    // 1. Kare alanı
+    public static double calculateSquareArea(double side) {
+        return side * side;
     }
 
-    // METOT 2: İvme hesapla (a = Δv / t)
-    public static double calculateAcceleration(double velocityChange, double time) {
-        // a = hiz degisimi / zaman
-        return 0.0; // Degistirin
+    // 2. Kare çevresi
+    public static double calculateSquarePerimeter(double side) {
+        return 4 * side;
     }
 
-    // METOT 3: Kuvvet hesapla (F = m * a)
-    public static double calculateForce(double mass, double acceleration) {
-        // F = kutle * ivme
-        return 0.0; // Degistirin
+    // 3. Dikdörtgen alanı
+    public static double calculateRectangleArea(double width, double height) {
+        return width * height;
     }
 
-    // METOT 4: İş hesapla (W = F * d)
-    public static double calculateWork(double force, double distance) {
-        // W = kuvvet * mesafe
-        return 0.0; // Degistirin
+    // 4. Dikdörtgen çevresi
+    public static double calculateRectanglePerimeter(double width, double height) {
+        return 2 * (width + height);
     }
 
-    // METOT 5: Güç hesapla (P = W / t)
-    public static double calculatePower(double work, double time) {
-        // P = is / zaman
-        return 0.0; // Degistirin
+    // 5. Daire alanı
+    public static double calculateCircleArea(double radius) {
+        return Math.PI * radius * radius;
     }
 
-    // METOT 6: Kinetik enerji (KE = 0.5 * m * v²)
-    public static double calculateKineticEnergy(double mass, double velocity) {
-        // KE = 0.5 * kutle * (hiz * hiz)
-        // Math.pow(velocity, 2) kullanabilirsiniz
-        return 0.0; // Degistirin
+    // 6. Daire çevresi
+    public static double calculateCircleCircumference(double radius) {
+        return 2 * Math.PI * radius;
     }
 
-    // METOT 7: Potansiyel enerji (PE = m * g * h)
-    public static double calculatePotentialEnergy(double mass, double gravity, double height) {
-        // PE = kutle * yercekimi * yukseklik
-        return 0.0; // Degistirin
+    // 7. Üçgen alanı (taban-yükseklik)
+    public static double calculateTriangleArea(double base, double height) {
+        return (base * height) / 2;
     }
 
-    // METOT 8: Momentum (p = m * v)
-    public static double calculateMomentum(double mass, double velocity) {
-        // p = kutle * hiz
-        return 0.0; // Degistirin
+    // 8. Üçgen çevresi
+    public static double calculateTrianglePerimeter(double a, double b, double c) {
+        return a + b + c;
     }
 
+    // ================================
+    //            MAIN
+    // ================================
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
 
-        System.out.println("=== FIZIK FORMUL ASISTANI ===");
-        System.out.println();
+        System.out.println("=== GEOMETRIK SEKIL HESAPLAYICI ===\n");
 
-        // TEMEL OLCUMLER
-        System.out.println("TEMEL OLCUMLER:");
-        System.out.print("Kutle (kg): ");
-        double mass = input.nextDouble();
+        // KARE
+        System.out.print("KARE:\nKenar uzunlugu (cm): ");
+        double kareKenar = input.nextDouble();
 
-        System.out.print("Mesafe (m): ");
-        double distance = input.nextDouble();
+        // DIKDORTGEN
+        System.out.print("\nDIKDORTGEN:\nKisa kenar (cm): ");
+        double kisa = input.nextDouble();
+        System.out.print("Uzun kenar (cm): ");
+        double uzun = input.nextDouble();
 
-        System.out.print("Zaman (s): ");
-        double time = input.nextDouble();
+        // DAIRE
+        System.out.print("\nDAIRE:\nYaricap (cm): ");
+        double r = input.nextDouble();
 
-        System.out.print("Hiz degisimi (m/s): ");
-        double deltaV = input.nextDouble();
+        // UCGEN
+        System.out.print("\nUCGEN:\nTaban (cm): ");
+        double taban = input.nextDouble();
+        System.out.print("Yukseklik (cm): ");
+        double yukseklik = input.nextDouble();
+        System.out.print("1. kenar (cm): ");
+        double a = input.nextDouble();
+        System.out.print("2. kenar (cm): ");
+        double b = input.nextDouble();
+        System.out.print("3. kenar (cm): ");
+        double c = input.nextDouble();
 
-        System.out.print("Yukseklik (m): ");
-        double height = input.nextDouble();
-
-        // HESAPLAMALARI YAP - Metotlari cagir
-        // 1. Hiz (v) hesaplanmali (KE ve Momentum icin gerekli)
-        // 2. Ivme (a) hesaplanmali (Kuvvet icin gerekli)
-        // 3. Kuvvet (F) hesaplanmali (Is icin gerekli)
-        // 4. Is (W) hesaplanmali (Guc icin gerekli)
-        // ... digerlerini hesaplayin
-  
-
-
-        // SONUCLARI YAZDIR
+        // =======================================
+        //            SONUÇLAR
+        // =======================================
         System.out.println("\n========================================");
         System.out.println("        HESAPLAMA SONUCLARI");
+        System.out.println("========================================\n");
+
+        // KARE
+        System.out.printf("KARE (kenar: %.1f cm):\n", kareKenar);
+        System.out.printf("  Alan      : %.2f cm²\n", calculateSquareArea(kareKenar));
+        System.out.printf("  Cevre     : %.2f cm\n\n", calculateSquarePerimeter(kareKenar));
+
+        // DIKDORTGEN
+        System.out.printf("DIKDORTGEN (%.1f x %.1f cm):\n", kisa, uzun);
+        System.out.printf("  Alan      : %.2f cm²\n", calculateRectangleArea(kisa, uzun));
+        System.out.printf("  Cevre     : %.2f cm\n\n", calculateRectanglePerimeter(kisa, uzun));
+
+        // DAIRE
+        System.out.printf("DAIRE (yaricap: %.1f cm):\n", r);
+        System.out.printf("  Alan      : %.2f cm²\n", calculateCircleArea(r));
+        System.out.printf("  Cevre     : %.2f cm\n\n", calculateCircleCircumference(r));
+
+        // UCGEN
+        System.out.printf("UCGEN (taban: %.1f, yukseklik: %.1f cm):\n", taban, yukseklik);
+        System.out.printf("  Alan      : %.2f cm²\n", calculateTriangleArea(taban, yukseklik));
+        System.out.printf("  Cevre     : %.2f cm\n\n", calculateTrianglePerimeter(a, b, c));
+
         System.out.println("========================================");
-
-        System.out.println("\nHIZ ve HAREKET:");
-        System.out.printf("  Hiz (v = s/t)             : %.2f m/s\n", velocity);
-        System.out.printf("  Ivme (a = Δv/t)           : %.2f m/s²\n", acceleration);
-
-        System.out.println("\nKUVVET ve IS:");
-        System.out.printf("  Kuvvet (F = m*a)          : %.2f N\n", force);
-        System.out.printf("  Is (W = F*d)              : %.2f J\n", work);
-        System.out.printf("  Guc (P = W/t)             : %.2f W\n", power);
-
-        System.out.println("\nENERJI:");
-        System.out.printf("  Kinetik Enerji (KE)       : %.2f J\n", kineticEnergy);
-        System.out.printf("  Potansiyel Enerji (PE)    : %.2f J\n", potentialEnergy);
-        // Toplam enerji = KE + PE
-        System.out.printf("  Toplam Enerji             : %.2f J\n", (kineticEnergy + potentialEnergy)); 
-
-        System.out.println("\nMOMENTUM:");
-        System.out.printf("  Momentum (p = m*v)        : %.2f kg·m/s\n", momentum);
-
-        System.out.println("\n========================================");
-
-        input.close();
     }
 }
