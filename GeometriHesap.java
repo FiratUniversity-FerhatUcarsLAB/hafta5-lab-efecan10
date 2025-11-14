@@ -2,7 +2,7 @@
  * Ad Soyad: [Efecan Önal]
  * Ogrenci No: [250541093]
  * Tarih: [14.11.2025]
- * Aciklama: Gorev 2 - Fizik Formulu Asistani
+ * Aciklama: Gorev 2 - geometrik hesap Asistani
  *import java.util.Scanner;
 
 public class GeometriHesap {
